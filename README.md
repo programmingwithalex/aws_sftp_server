@@ -1,4 +1,4 @@
-# sftp_server
+# aws_sftp_server
 
 Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingwithalex)
 
@@ -19,7 +19,7 @@ Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingw
 
 5. Resrict IP access at the user-level
 
-## Create SFTP Server - SSH Key Authentication
+### Create SFTP Server - SSH Key Authentication
 
 * Connecting with SSH keys via WinSCP:
   * Public key pasting into AWS:
@@ -29,13 +29,13 @@ Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingw
   * Set both as `Restricted`
   * Set `admin` user `Home directory` to empty
 
-## Create SFTP Server - Password Authentication
+### Create SFTP Server - Password Authentication
 
 * Use `CloudFormation` script found on [AWS blogs](https://aws.amazon.com/blogs/storage/enable-password-authentication-for-aws-transfer-for-sftp-using-aws-secrets-manager/)
 * Alternatively, use the same file downloaded locally in the repository with slight modifications to provide custom names for resources created
   * `aws_files\aws-transfer-custom-idp-secrets-manager-apig.template.yml`
 
-## Create Separate IAM Base and Admin User Roles and Policies
+### Create Separate IAM Base and Admin User Roles and Policies
 
 * Reference `aws_files` folder for scripts necessary
   * `aws_files\iam_role_user_base.json`
@@ -55,7 +55,7 @@ Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingw
   * Prevents traversing up directories if want to restrict to user folder
   * Hides top-folder name from user
 
-## Resrict IP Access at the User-Level
+### Resrict IP Access at the User-Level
 
 * Access incoming IP from lambda function with `event['sourceIp']`
 
