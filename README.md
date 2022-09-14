@@ -73,6 +73,18 @@ def lambda_handler(event, context):
 * Make sure WinSCP > Advanced > Directories > Remote Directories
   * Set to empty
 
+### File Upload Successful but Error Setting Permission and/or Timestamp (WinSCP)
+
+1. Menu > Options > Preferences > Transfer > Edit
+2. Common Options > Uncheck “Preserve timeStamp”
+3. Upload options > uncheck “Set permissions”
+
+---
+
+## To Do
+
+* Explore [alternatives to Secrets Manager for authentication](https://docs.aws.amazon.com/transfer/latest/userguide/custom-identity-provider-users.html)
+
 ---
 
 ![aws diagram](images/aws_diagram.png)
