@@ -70,7 +70,7 @@ def lambda_handler(event, context):
 
 ### Connecting to SFTP Server
 
-* Make sure WinSCP > Advanced > Directories > Remote Directories
+* Make sure WinSCP > New Session > Advanced > Directories > Remote Directories
   * Set to empty
 
 ### File Upload Successful but Error Setting Permission and/or Timestamp (WinSCP)
