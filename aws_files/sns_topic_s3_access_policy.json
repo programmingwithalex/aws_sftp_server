@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Id": "policy_id",
+  "Statement": [
+    {
+      "Sid": "SNS topic policy",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "SNS:Publish",
+      "Resource": "<<sns_topic_arn>>",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "<<aws_account_id>>"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:s3:*:*:<<s3_bucket_name>>"
+        }
+      }
+    }
+  ]
+}

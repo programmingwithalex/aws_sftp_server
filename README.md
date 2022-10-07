@@ -19,6 +19,8 @@ Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingw
 
 5. Resrict IP access at the user-level
 
+6. Email notifications for file uploads to SFTP server
+
 ### Create SFTP Server - SSH Key Authentication
 
 * Connecting with SSH keys via WinSCP:
@@ -64,13 +66,32 @@ def lambda_handler(event, context):
     source_ip = event['sourceIp']
 ```
 
+### Email Notifications for File Uploads to SFTP Server
+
+Create SNS topic steps:
+
+1. Create AWS SNS (Simple Notification Service) topic
+2. Subscribe to SNS topic (email, sms, ...)
+3. Modify access policy of SNS topic to allow S3 bucket to publish to SNS
+  a. Reference `aws_files\sns_topic_s3_access_policy.json`
+
+Two options to link SNS topic to S3 event notifications:
+
+1. Link SNS topic to S3 bucket (out-of-the-box) steps:
+  a. Create S3 event notification that is linked to SNS topic that executes on PUT events
+
+2. Link SNS topic to S3 bucket (custom) steps:
+  a. Create AWS lambda function that executes SNS topic (reference `aws_files\lambda_sns_handler.py`)
+  b. Modify AWS IAM role's policy assigned to lambda function to allow `sns:Publish`
+  c. Create S3 event notification that is linked to lambda function that executes on PUT events
+
 ---
 
 ## Possible Issues and Solutions
 
-### Connecting to SFTP Server
+### Connecting to SFTP Server (WinSCP)
 
-* Make sure WinSCP > New Session > Advanced > Directories > Remote Directories
+* WinSCP > New Session > Advanced > Directories > Remote Directories
   * Set to empty
 
 ### File Upload Successful but Error Setting Permission and/or Timestamp (WinSCP)
@@ -83,7 +104,7 @@ def lambda_handler(event, context):
 
 ## To Do
 
-* Explore [alternatives to Secrets Manager for authentication](https://docs.aws.amazon.com/transfer/latest/userguide/custom-identity-provider-users.html)
+* Explore [alternatives to Secrets Manager for authentication with Cognito](https://docs.aws.amazon.com/transfer/latest/userguide/custom-identity-provider-users.html)
 
 ---
 
