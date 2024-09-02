@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![BSD-3-Clause License][license-shield]][license-url]
+
 # aws_sftp_server
 
 Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingwithalex)
@@ -115,3 +121,15 @@ Two options to link SNS topic to S3 event notifications:
 ## License
 
 [BSD 3-Clause License](https://github.com/programmingwithalex/aws_sftp_server/blob/main/LICENSE)
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/programmingwithalex/aws_sftp_server?style=for-the-badge
+[contributors-url]: https://github.com/programmingwithalex/aws_sftp_server/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/programmingwithalex/aws_sftp_server?style=for-the-badge
+[forks-url]: https://github.com/programmingwithalex/aws_sftp_server/network/members
+[stars-shield]: https://img.shields.io/github/stars/programmingwithalex/aws_sftp_server?style=for-the-badge
+[stars-url]: https://github.com/programmingwithalex/aws_sftp_server/stargazers
+[issues-shield]: https://img.shields.io/github/issues/programmingwithalex/aws_sftp_server?style=for-the-badge
+[issues-url]: https://github.com/programmingwithalex/aws_sftp_server/issues
+[license-shield]: https://img.shields.io/github/license/programmingwithalex/aws_sftp_server.svg?style=for-the-badge
+[license-url]: https://github.com/programmingwithalex/aws_sftp_server/blob/main/LICENSE
