@@ -22,7 +22,6 @@
   </p>
 </div>
 
----
 
 ## Series Outline
 
