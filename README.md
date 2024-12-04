@@ -4,9 +4,23 @@
 [![Issues][issues-shield]][issues-url]
 [![BSD-3-Clause License][license-shield]][license-url]
 
-# aws_sftp_server
+<br />
+<div align="center">
+    <p>Copyright (c) 2022, <a href="https://github.com/programmingwithalex">GitHub@programmingwithalex</a></p>
 
-Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingwithalex)
+
+  <h3 align="center">AWS SFTP Server</h3>
+
+  <p align="center">
+    create SFTP server on AWS with AWS Transfer Family
+    <br />
+    <a href="https://github.com/programmingwithalex/aws_sftp_server">View Demo</a>
+    ·
+    <a href="https://github.com/programmingwithalex/aws_sftp_server/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/programmingwithalex/aws_sftp_server/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
 ---
 
@@ -21,7 +35,7 @@ Copyright (c) 2022, [GitHub@programmingwithalex](https://github.com/programmingw
      * base user will only be allowed to download from SFTP server
      * admin user will be allowed to download, upload, and delete from SFTP server
 
-4. [Setup AWS web application firewall to restrict IP access on server-level](https://aws.amazon.com/blogs/storage/securing-aws-transfer-family-with-aws-web-application-firewall-and-amazon-api-gateway/)]
+4. [Setup AWS web application firewall to restrict IP access on server-level](https://aws.amazon.com/blogs/storage/securing-aws-transfer-family-with-aws-web-application-firewall-and-amazon-api-gateway/)
 
 5. Resrict IP access at the user-level
 
